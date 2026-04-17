@@ -164,7 +164,7 @@ parse_mae_file <- function(
 #' Parse a single CT block
 #'
 #' @param lines_trimmed All lines of the file, trimmed.
-#' @param start_line Line index where "f_m_ct {" was found.
+#' @param start_line Line index where `f_m_ct` block starts.
 #' @param include_atoms Whether to include atom data.
 #'
 #' @return A list with `data` (named list of CT properties) and
@@ -257,7 +257,7 @@ parse_ct_block <- function(lines_trimmed, start_line, include_atoms) {
 }
 
 
-#' Parse an indexed block (m_atom[N], m_bond[M], etc.)
+#' Parse an indexed block (m_atom, m_bond, etc.)
 #'
 #' @param lines_trimmed Trimmed lines.
 #' @param start_line Line where the block header is.
@@ -296,7 +296,7 @@ parse_indexed_block <- function(lines_trimmed, start_line) {
             break
         }
         if (nzchar(line)) {
-            data_lines <- c(data_lines, lines[i])
+            data_lines <- c(data_lines, lines_trimmed[i])
             row_count <- row_count + 1L
         }
         i <- i + 1L

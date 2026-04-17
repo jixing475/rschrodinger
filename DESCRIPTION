@@ -7,6 +7,7 @@ Description: Read Maestro (.mae/.maegz) files natively in R without
     requiring a Schrodinger installation. Optionally bridge to
     Schrodinger's Python API for protein-ligand interaction analysis
     and job monitoring via sandboxed subprocess calls.
+Depends: R (>= 4.1.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
