@@ -1,0 +1,98 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ r_pdb_PDB_CRYST1_a
+ r_pdb_PDB_CRYST1_b
+ r_pdb_PDB_CRYST1_c
+ r_pdb_PDB_CRYST1_alpha
+ r_pdb_PDB_CRYST1_beta
+ r_pdb_PDB_CRYST1_gamma
+ i_pdb_PDB_CRYST1_z
+ i_m_source_file_index
+ s_pdb_PDB_TITLE
+ s_pdb_PDB_ID
+ s_pdb_PDB_CRYST1_Space_Group
+ s_pdb_PDB_CLASSIFICATION
+ s_pdb_PDB_DEPOSITION_DATE
+ s_pdb_PDB_format_version
+ s_m_source_file
+ i_m_ct_format
+ :::
+ 3MXF 
+  36.8
+  44.76
+  78.39
+  90
+  90
+  90
+  4
+  1
+  "CRYSTAL STRUCTURE OF THE FIRST BROMODOMAIN OF HUMAN BRD4 IN COMPLEX WITH THE INHIBITOR JQ1" 
+  3MXF 
+  "P 21 21 21" 
+  "CELL CYCLE" 
+  07-MAY-10 
+  3.0 
+  /Users/zero/Desktop/DKD-spesis/results/T13_redo/targets/3MXF_A_clean.pdb 
+  2
+ m_atom[3] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  s_m_mmod_res
+  s_m_chain_name
+  i_m_color
+  s_m_pdb_residue_name
+  s_m_pdb_atom_name
+  i_m_atomic_number
+  i_m_formal_charge
+  s_m_color_rgb
+  i_m_secondary_structure
+  r_m_pdb_occupancy
+  r_m_pdb_tfactor
+  i_pdb_PDB_serial
+  r_m_alt_pdb_occupancy
+  r_m_alt_pdb_tfactor
+  r_m_alt_x_coord
+  r_m_alt_y_coord
+  r_m_alt_z_coord
+  r_pdb_alt_occupancy_A
+  r_pdb_alt_occupancy_B
+  r_pdb_alt_tfactor_A
+  r_pdb_alt_tfactor_B
+  r_pdb_alt_x_coord_A
+  r_pdb_alt_x_coord_B
+  r_pdb_alt_y_coord_A
+  r_pdb_alt_y_coord_B
+  r_pdb_alt_z_coord_A
+  r_pdb_alt_z_coord_B
+  i_m_pdb_convert_problem
+  i_pdb_alt_PDB_serial
+  i_pdb_alt_PDB_serial_A
+  i_pdb_alt_PDB_serial_B
+  s_pdb_altloc_chars
+  :::
+  1 35 35.982000 2.596000 6.329000 42 S A 2 "SER " " N  " 7 1 A0A0A0  0 1 40.81 1 <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+  2 4 36.117000 4.047000 6.696000 42 S A 2 "SER " " CA " 6 0 A0A0A0  0 1 42.79 2 <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+  3 2 34.894000 4.588000 7.430000 42 S A 2 "SER " " C  " 6 0 A0A0A0  0 1 37.51 3 <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+  :::
+ } 
+ m_bond[2] { 
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 2 3 1
+  :::
+ } 
+} 
+

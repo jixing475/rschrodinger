@@ -1,0 +1,23 @@
+Package: rschrodinger
+Title: Fast Data Bridge Between Schrodinger and R
+Version: 0.1.0
+Authors@R: 
+    person("Jixing", "Liu", , "jixing.liu@example.com", role = c("aut", "cre", "cph"))
+Description: Read Maestro (.mae/.maegz) files natively in R without
+    requiring a Schrodinger installation. Optionally bridge to
+    Schrodinger's Python API for protein-ligand interaction analysis
+    and job monitoring via sandboxed subprocess calls.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    cli,
+    jsonlite,
+    processx,
+    rlang,
+    tibble,
+    withr
