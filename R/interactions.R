@@ -34,7 +34,6 @@ get_protein_ligand_interactions <- function(
     writeLines(interaction_python_script(), py_script)
 
     # Build command
-    run_exe <- file.path(schrodinger_path, "run")
     complex_abs <- normalizePath(complex_file, mustWork = TRUE)
 
     # Execute in sandboxed subprocess
