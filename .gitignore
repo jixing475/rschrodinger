@@ -1,2 +1,9 @@
 .Rproj.user
 docs
+CLAUDE.md
+GEMINI.md
+program.md
+.agent/
+.claude/
+context/
+output/
