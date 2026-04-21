@@ -22,8 +22,9 @@ Schrödinger 套件是药物发现的工业标准，但它的数据格式
 ## 安装
 
 ``` r
-# 从本地安装
-devtools::install_local("/tmp/task-agents/rschrodinger")
+# 从 GitHub 安装
+# install.packages("remotes")
+remotes::install_github("jixing475/rschrodinger")
 ```
 
 ``` r
@@ -60,7 +61,8 @@ CT。
 
 ``` r
 # 真实的 Glide SP docking 结果（BRD4 × Indomethacin）
-maegz_file <- "/tmp/task-agents/rschrodinger/context/testdata/BRD4_Indomethacin_SP_pv.maegz"
+# 这里替换为你自己跑完 Glide 输出的 pv.maegz 文件路径
+maegz_file <- "/path/to/your/BRD4_Indomethacin_SP_pv.maegz"
 docking <- read_mae_fast(maegz_file)
 cat("CT blocks:", nrow(docking), "\n")
 cat("Properties:", ncol(docking), "\n")
@@ -299,7 +301,7 @@ ggplot(energy_data, aes(x = label, y = energy, fill = component)) +
 Glide 同时输出 CSV 和 `.maegz`，用 CSV 验证解析器的准确性：
 
 ``` r
-csv_file <- "/tmp/task-agents/rschrodinger/context/testdata/BRD4_Indomethacin_SP.csv"
+csv_file <- "/path/to/your/BRD4_Indomethacin_SP.csv"
 csv_data <- read.csv(csv_file)
 
 csv_scores <- sort(round(csv_data$r_i_glide_gscore, 3))

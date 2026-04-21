@@ -106,8 +106,9 @@
 </h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># 从本地安装</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_local</span><span class="op">(</span><span class="st">"/tmp/task-agents/rschrodinger"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># 从 GitHub 安装</span></span>
+<span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"jixing475/rschrodinger"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
@@ -139,7 +140,8 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 真实的 Glide SP docking 结果（BRD4 × Indomethacin）</span></span>
-<span><span class="va">maegz_file</span> <span class="op">&lt;-</span> <span class="st">"/tmp/task-agents/rschrodinger/context/testdata/BRD4_Indomethacin_SP_pv.maegz"</span></span>
+<span><span class="co"># 这里替换为你自己跑完 Glide 输出的 pv.maegz 文件路径</span></span>
+<span><span class="va">maegz_file</span> <span class="op">&lt;-</span> <span class="st">"/path/to/your/BRD4_Indomethacin_SP_pv.maegz"</span></span>
 <span><span class="va">docking</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/read_mae_fast.html">read_mae_fast</a></span><span class="op">(</span><span class="va">maegz_file</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"CT blocks:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">docking</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"Properties:"</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">ncol</a></span><span class="op">(</span><span class="va">docking</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span></code></pre></div>
@@ -363,7 +365,7 @@
 <p>Glide 同时输出 CSV 和 <code>.maegz</code>，用 CSV 验证解析器的准确性：</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">csv_file</span> <span class="op">&lt;-</span> <span class="st">"/tmp/task-agents/rschrodinger/context/testdata/BRD4_Indomethacin_SP.csv"</span></span>
+<code class="sourceCode R"><span><span class="va">csv_file</span> <span class="op">&lt;-</span> <span class="st">"/path/to/your/BRD4_Indomethacin_SP.csv"</span></span>
 <span><span class="va">csv_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">csv_file</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">csv_scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">csv_data</span><span class="op">$</span><span class="va">r_i_glide_gscore</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
