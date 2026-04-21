@@ -9,3 +9,7 @@
 ^context$
 ^evaluate\.R$
 ^program\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
